@@ -1,22 +1,25 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Purrfect";
 }
 
+<div class="index-background">
 
-<div class="fondo">
-<div class="text-center">
-    <h1 class="display-4">Bienvenido a Purrfect</h1>
-    
-    <div>
-        <button type="submit"> <a asp-action="Formulario" asp-controller="Home">
-                Formulario </a>
-        </button>
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="success-message">
+            @TempData["mensaje"]
+        </div>
+    }
+
+    <h1 class="welcome-title">Bienvenido a Purrfect</h1>
+
+    <div class="button-container">
+        <div>
+            <a asp-action="Formulario" asp-controller="Home" class="gradient-button">Formulario</a>
+        </div>
+        <div>
+            <a asp-action="Productos" asp-controller="Home" class="gradient-button">Productos</a>
+        </div>
     </div>
 
-    <div>
-    <p>@TempData["mensaje"] </p>
-    </div>
-    
-</div>
 </div>

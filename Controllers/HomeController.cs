@@ -29,7 +29,7 @@ public class HomeController : Controller
     {
         if (ModelState.IsValid)
         {
-            TempData["mensaje"] = "Gracias " + mascota.nombreD + " por haberte registrado a " + mascota.nombreM + ":D";
+            TempData["mensaje"] = "Gracias " + mascota.nombreD + " por haberte registrado a " + mascota.nombreM + " :D";
             return RedirectToAction("Index");
         }
         return View(mascota);
