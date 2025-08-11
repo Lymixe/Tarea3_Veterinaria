@@ -1,0 +1,59 @@
+﻿@model Tarea3_Veterianria.Models.Mascota;
+
+@{
+    ViewData["Title"] = "Purrfect";
+}
+
+
+<div class="fondo2">
+    <div class="text-center">
+        <h1 class="display-4">Formulario</h1>
+    </div>
+
+    <div>
+        <form asp-action="Formulario" asp-controller="Home" method="post">
+            <fieldset>
+                <div>
+                    <label for="nombreM">¿Cuál es el nombre de tu mascota?</label>
+                    <input type="text" placeholder="Nombre de la mascota" name="nombreM" id="nombreM">
+                </div>
+                <div>
+                    <label for="tipoM">¿Qué tipo de animal es?</label>
+                    <input type="text" placeholder="Ejm: Perro, Gato, Hamster" name="tipoM" id="tipoM">
+                </div>
+                <div>
+                    <label for="razaM">¿De qué raza es?</label>
+                    <input type="text" placeholder="Ejm: Pastor Alemán, Siamés" name="razaM" id="razaM">
+                </div>
+                <div>
+                    <label for="">
+                        Sexo de la mascota:
+                    <select name="sexoM" id="sexoM">
+                        <option value="Macho">Macho</option>
+                        <option value="Hembra">Hembra</option>
+                        <option value="No especifico">No especifico</option>
+                    </select>
+                    </label>
+                </div>
+                <div>
+                    <label for="nombreD">¿Cuál es tu nombre?</label>
+                    <input type="text" placeholder="Nombre del dueño" name="nombreD" id="nombreD">
+                </div>
+                <div>
+                    <label for="email">¿Cuál es tu correo electrónico?</label>
+                    <input type="email" placeholder="ejemplo@gmail.com" name="email" id="email">
+                </div>
+
+                <div>
+                    <button type="submit">
+                        Enviar
+                    </button>
+                </div>
+
+            
+        </form>
+        </fieldset>
+
+    </div>
+
+</div>

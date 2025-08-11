@@ -23,6 +23,23 @@ public class HomeController : Controller
         return View();
     }
 
+    
+    [HttpPost]
+    public IActionResult Formulario(Mascota mascota)
+    {
+        if (ModelState.IsValid)
+        {
+            TempData["mensaje"] = "Gracias " + mascota.nombreD + " por haberte registrado a " + mascota.nombreM + ":D";
+            return RedirectToAction("Index");
+        }
+        return View(mascota);
+    }
+    public IActionResult Formulario()
+    {
+        return View();
+    }
+    
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
