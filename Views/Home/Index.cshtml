@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Purrfect";
 }
 
@@ -8,9 +9,13 @@
     <h1 class="display-4">Bienvenido a Purrfect</h1>
     
     <div>
-        <button type="submit"> <a>
+        <button type="submit"> <a asp-action="Formulario" asp-controller="Home">
                 Formulario </a>
         </button>
+    </div>
+
+    <div>
+    <p>@TempData["mensaje"] </p>
     </div>
     
 </div>

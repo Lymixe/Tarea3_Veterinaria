@@ -43,3 +43,17 @@ body {
     padding: 10px;
     box-sizing: border-box;
 }
+
+.fondo2 {
+    background-image: url("catcat.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
