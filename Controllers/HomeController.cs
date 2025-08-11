@@ -29,16 +29,26 @@ public class HomeController : Controller
     {
         if (ModelState.IsValid)
         {
-            TempData["mensaje"] = "Gracias " + mascota.nombreD + " por haberte registrado a " + mascota.nombreM + ":D";
+            TempData["mensaje"] = "Gracias " + mascota.nombreD + " por haberte registrado a " + mascota.nombreM + " :D";
             return RedirectToAction("Index");
         }
         return View(mascota);
     }
+
+    public IActionResult InteresadoEnProductos()
+{
+    TempData["mensaje"] = "Si estas interesado en algunos de los productos escribe al 123456789 :D";
+    return RedirectToAction("Index");
+}
     public IActionResult Formulario()
     {
         return View();
     }
     
+    public IActionResult Productos()
+    {
+    return View();
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
